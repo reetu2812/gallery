@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="full" id="fullImgBox">
+        <img src="./Tanjiro-Demon-Slayer.webp" id="fullImg">
+        <span onclick="closeFullImg()">x</span>
+    </div>
+    <h1 style="color: white;display:flex;justify-content: center;align-items: center;padding-top: 30px;font-family: cursive;font-size: 50px;">DEMON SLAYER ALBUM</h1>
+    <div class="container">
+       
+        <div class="images">
+            <img src="./Tanjiro-Demon-Slayer.webp" onclick="openImage(this.src)">
+            <img src="./16786722321687869634.webp" onclick="openImage(this.src)">
+            <img src="./20231028-demon-slayer-nezuko.webp" onclick="openImage(this.src)">
+            <img src="./Demon-Slayer-Mitsuri.webp" onclick="openImage(this.src)">
+            <img src="./demon-slayer-season-3-zenitsu-inosuke-updates.webp" onclick="openImage(this.src)">
+            <img src="./Inosuke.avif" onclick="openImage(this.src)">
+            <img src="./muzan.0.jpeg" onclick="openImage(this.src)">
+            <img src="./por-que-murio-rengoku.jpg" onclick="openImage(this.src)">
+           
+        </div>
+    </div>
+    <script>
+          var fullImgBox = document.getElementById("fullImgBox");
+          var fullImg = document.getElementById("fullImg");
+          function openImage(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+          }
+          function closeFullImg(){
+            fullImgBox.style.display = "none";
+          }
+    </script>
+</body>
+</html>
